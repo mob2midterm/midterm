@@ -9,6 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+
+    @IBOutlet weak var displayNumb: UITextField!
+    
+  
+    @IBAction func operatorTapped(sender: AnyObject) {
+    }
+    
+    
+    @IBAction func equalTapped(sender: AnyObject) {
+    }
+    
+    @IBAction func numberTapped(sender: AnyObject) {
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
