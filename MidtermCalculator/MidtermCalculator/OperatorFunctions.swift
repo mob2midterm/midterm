@@ -8,3 +8,15 @@
 
 import Foundation
 
+var userTypingNumber = false
+var firstNum = 0
+var secondNum = 0
+var desiredOperator = ""
+
+func numberIsBeingTapped {
+    if userTypingNumber == true {
+    
+    } else {
+    
+    }
+}
