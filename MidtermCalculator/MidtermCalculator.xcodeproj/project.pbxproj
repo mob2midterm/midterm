@@ -13,6 +13,7 @@
 		20636F8A1AE0739E00E57DD9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20636F891AE0739E00E57DD9 /* Images.xcassets */; };
 		20636F8D1AE0739E00E57DD9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20636F8B1AE0739E00E57DD9 /* LaunchScreen.xib */; };
 		20636F991AE0739E00E57DD9 /* MidtermCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20636F981AE0739E00E57DD9 /* MidtermCalculatorTests.swift */; };
+		20636FA31AE0765100E57DD9 /* OperatorFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20636FA21AE0765100E57DD9 /* OperatorFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		20636F921AE0739E00E57DD9 /* MidtermCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidtermCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20636F971AE0739E00E57DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20636F981AE0739E00E57DD9 /* MidtermCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidtermCalculatorTests.swift; sourceTree = "<group>"; };
+		20636FA21AE0765100E57DD9 /* OperatorFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				20636F821AE0739E00E57DD9 /* AppDelegate.swift */,
 				20636F841AE0739E00E57DD9 /* ViewController.swift */,
+				20636FA21AE0765100E57DD9 /* OperatorFunctions.swift */,
 				20636F861AE0739E00E57DD9 /* Main.storyboard */,
 				20636F891AE0739E00E57DD9 /* Images.xcassets */,
 				20636F8B1AE0739E00E57DD9 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20636FA31AE0765100E57DD9 /* OperatorFunctions.swift in Sources */,
 				20636F851AE0739E00E57DD9 /* ViewController.swift in Sources */,
 				20636F831AE0739E00E57DD9 /* AppDelegate.swift in Sources */,
 			);
