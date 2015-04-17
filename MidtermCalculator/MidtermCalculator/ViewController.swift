@@ -14,23 +14,24 @@ class ViewController: UIViewController {
     var firstNum = 0
     var secondNum = 0
     var desiredOperator = ""
+    var period = "."
     
     
-    
-    @IBOutlet weak var displayNum: UITextField!
+    @IBOutlet weak var displayNum: UILabel!
+
     
     
     @IBAction func operatorTapped(sender: UIButton) {
         
         userTypingNumber = false
-        firstNum = displayNum.text.toInt()!
+        firstNum = displayNum.text!.toInt()!
         desiredOperator = sender.currentTitle!
     }
     
     
     
     @IBAction func calcPercentage(sender: UIButton) {
-        var percent = displayNum.text.toInt()!
+        var percent = displayNum.text!.toInt()!
         var result = percent / 100
         
         displayNum.text = String(result)
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
     
     @IBAction func positiveNegativeButton(sender: AnyObject) {
         
-        var posNeg = displayNum.text.toInt()!
+        var posNeg = displayNum.text!.toInt()!
         var result = posNeg * -1
         
         displayNum.text = String(result)
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
     
     @IBAction func clearButton(sender: AnyObject) {
         
-        var clearDisplay = displayNum.text.toInt()!
+        var clearDisplay = displayNum.text!.toInt()!
         var result = clearDisplay * 0
         
         displayNum.text = String(result)
@@ -59,7 +60,7 @@ class ViewController: UIViewController {
         
         userTypingNumber = false
         var result = 0
-        secondNum = displayNum.text.toInt()!
+        secondNum = displayNum.text!.toInt()!
         
         if desiredOperator == "+" {
             result = firstNum + secondNum
@@ -76,11 +77,11 @@ class ViewController: UIViewController {
     @IBAction func numberTapped(sender: UIButton) {
         var number = sender.currentTitle
         
-        if userTypingNumber == true {displayNum.text = displayNum.text + number!
+        if userTypingNumber == true {displayNum.text = displayNum.text! + number!
         } else {
             displayNum.text = number!
             userTypingNumber = true
-            
+
         }
     }
     
