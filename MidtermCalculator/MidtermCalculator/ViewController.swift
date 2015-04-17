@@ -11,10 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var userTypingNumber = false
-    var firstNum = 0
-    var secondNum = 0
+    var firstNum: Float = 0.0
+    var secondNum: Float = 0.0
     var desiredOperator = ""
-    var period = "."
     
     
     @IBOutlet weak var displayNum: UILabel!
@@ -24,11 +23,9 @@ class ViewController: UIViewController {
     @IBAction func operatorTapped(sender: UIButton) {
         
         userTypingNumber = false
-        firstNum = displayNum.text!.toInt()!
+        firstNum = (displayNum.text! as NSString).floatValue
         desiredOperator = sender.currentTitle!
     }
-    
-    
     
     @IBAction func calcPercentage(sender: UIButton) {
         var percent = displayNum.text!.toInt()!
@@ -49,9 +46,8 @@ class ViewController: UIViewController {
     
     @IBAction func clearButton(sender: AnyObject) {
         
-        var clearDisplay = displayNum.text!.toInt()!
-        var result = clearDisplay * 0
-        
+        var clearDisplay = (displayNum.text! as NSString).floatValue
+        var result: Float = clearDisplay * 0
         displayNum.text = String(result)
     }
     
@@ -59,8 +55,8 @@ class ViewController: UIViewController {
     @IBAction func equalTapped(sender: AnyObject) {
         
         userTypingNumber = false
-        var result = 0
-        secondNum = displayNum.text!.toInt()!
+        var result: Float = 0.0
+        secondNum = (displayNum.text! as NSString).floatValue
         
         if desiredOperator == "+" {
             result = firstNum + secondNum
