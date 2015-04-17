@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     var userTypingNumber = false
-    var firstNum: Float = 0.0
-    var secondNum: Float = 0.0
+    var firstNum: Float = 0
+    var secondNum: Float = 0
     var desiredOperator = ""
     
     
@@ -28,10 +28,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calcPercentage(sender: UIButton) {
-        var percent = displayNum.text!.toInt()!
-        var result = percent / 100
-        
-        displayNum.text = String(result)
+        var percent = (displayNum.text! as NSString).floatValue
+        var result: Float = percent / 100
+        displayNum.text = "\(result)"
     }
     
     @IBAction func positiveNegativeButton(sender: AnyObject) {
@@ -44,18 +43,19 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func clearButton(sender: AnyObject) {
+    @IBAction func clearButton(sender: UIButton) {
         
         var clearDisplay = (displayNum.text! as NSString).floatValue
-        let result: Float = clearDisplay * 0
-        displayNum.text = String(stringInterpolationSegment: result)
+        var result: Float = clearDisplay * 0
+        displayNum.text = "0"
     }
-    
+
+
     
     @IBAction func equalTapped(sender: AnyObject) {
         
         userTypingNumber = false
-        var result: Float = 0.0
+        var result: Float = 0
         secondNum = (displayNum.text! as NSString).floatValue
         
         if desiredOperator == "+" {
