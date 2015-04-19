@@ -35,10 +35,10 @@ class ViewController: UIViewController {
     
     @IBAction func positiveNegativeButton(sender: AnyObject) {
         
-        var posNeg = displayNum.text!.toInt()!
+        var posNeg = (displayNum.text! as NSString).floatValue
         var result = posNeg * -1
         
-        displayNum.text = String(result)
+        displayNum.text = String(stringInterpolationSegment: result)
         
     }
     
