@@ -44,7 +44,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func clearButton(sender: UIButton) {
-        
         var clearDisplay = (displayNum.text! as NSString).floatValue
         var result: Float = clearDisplay * 0
         displayNum.text = "0"
