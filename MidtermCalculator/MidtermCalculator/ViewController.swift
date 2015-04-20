@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var displayNum: UILabel!
-
+    
     
     
     @IBAction func operatorTapped(sender: UIButton) {
@@ -48,8 +48,8 @@ class ViewController: UIViewController {
         var result: Float = clearDisplay * 0
         displayNum.text = "0"
     }
-
-
+    
+    
     
     @IBAction func equalTapped(sender: AnyObject) {
         
@@ -70,13 +70,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func numberTapped(sender: UIButton) {
-        var number = sender.currentTitle
-        
-        if userTypingNumber == true {displayNum.text = displayNum.text! + number!
-        } else {
-            displayNum.text = number!
-            userTypingNumber = true
-
+        if let number = sender.currentTitle{
+            
+            if number == "." {
+                displayNum.text = displayNum.text?.stringByReplacingOccurrencesOfString(".", withString: "")
+            }
+            
+            if userTypingNumber == true {
+                displayNum.text = displayNum.text! + number
+            } else {
+                displayNum.text = number
+                userTypingNumber = true
+                
+            }
         }
     }
     
