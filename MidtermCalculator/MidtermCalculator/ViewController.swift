@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     var firstNum: Float = 0
     var secondNum: Float = 0
     var desiredOperator = ""
+    var hasBeenCleared = false
     
     
     @IBOutlet weak var displayNum: UILabel!
+    
     
     
     
@@ -43,11 +45,43 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func clearButton(sender: UIButton) {
-        var clearDisplay = (displayNum.text! as NSString).floatValue
-        var result: Float = clearDisplay * 0
-        displayNum.text = "0"
+
+    
+    
+    @IBAction func allClearButton(sender: AnyObject) {
+        
+//        if userTypingNumber == false || hasBeenCleared == true {
+//            firstNum = 0
+//            secondNum = 0
+//            displayNum.text = "0"
+//            println("All clear here!")
+//            hasBeenCleared = false
+//
+//        } else {
+//            displayNum.text = "0"
+//            println("Just clearing the display")
+//            println("firstNum is: \(firstNum), secondNum is: \(secondNum)")
+//            hasBeenCleared == true
+//        }
+        
+        if hasBeenCleared == false {
+            displayNum.text = "0"
+            println("Just clearing the display")
+            println("firstNum is: \(firstNum), secondNum is: \(secondNum)")
+            hasBeenCleared = true
+            
+        } else {
+            firstNum = 0
+            secondNum = 0
+            displayNum.text = "0"
+            println("All clear here!")
+            hasBeenCleared = false
+        }
+        
+
+        
     }
+    
     
     
     
@@ -69,6 +103,8 @@ class ViewController: UIViewController {
         displayNum.text = "\(result)"
     }
     
+    
+    
     @IBAction func numberTapped(sender: UIButton) {
         if let number = sender.currentTitle{
             
@@ -89,6 +125,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
